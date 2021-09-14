@@ -8,6 +8,10 @@ $background-button: linear-gradient(180deg, $secondary-color 0%, $primary-color 
 $softshadowing: 0 0 8px 0 rgba(0,0,0,0.2);
 $middleshadowing: 1px 10px 18px 0px rgba(0,0,0,0.25);
 
+.coloredPrimary
+{
+    color: $primary-color;
+}
 html 
 {
   scroll-behavior: smooth;
@@ -127,11 +131,11 @@ header
 }
 .fonct-btn:nth-child(3)
 {
-    margin-top: 20px;
+    margin-top: 40px;
 }
 .fonct-btn:nth-child(4)
 {
-    margin-top: 20px;
+    margin-top: 40px;
 }
 .fonct-btn a
 {
@@ -161,6 +165,102 @@ header
 {
     color: $paragraph-color;
     margin-right: 20px;
+}
+.restaurants
+{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 30px 0 70px 0;
+}
+.containerRestaurants
+{
+    width: 90%;
+}
+.containerRestaurants h1
+{
+    font-family: 'Roboto';
+    font-weight: bold;
+}
+.restauCards
+{
+    position: relative;
+    width: 100%;
+    border-radius: 15px;
+    overflow: hidden;
+    margin-top: 25px;
+    box-shadow: $middleshadowing;
+}
+.restauCards a
+{
+    position: absolute;
+    background-color: #99E2D0;
+    color: #008766;
+    padding: 10px;
+    top: 5%;
+    right: 5%;
+    font-family: 'Roboto';
+    font-weight: bold;
+}
+.restauCards img
+{
+    width: 100%;
+    object-fit: cover;
+    height: 200px;
+    margin: 0;
+    padding: 0;
+}
+.restauCardsDescription
+{
+    width: 100%;
+    margin-top: 0;
+    background-color: white;
+    padding: 10px 0 0 0;
+    font-family: 'Roboto';
+    display: flex;
+    justify-content: center;
+}
+.restauCardsDescription i
+{
+    font-size: 35px;
+    font-weight: 100;
+    color: black;
+    background-clip: text;
+    -webkit-background-clip: text;
+}
+.restauCardsDescription i:hover
+{
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background: $background-button;
+}
+.restauSizer
+{
+    width: 95%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.restauCardsDescriptionInner
+{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    flex-grow: 1;
+    margin-top: 0;
+    background-color: white;
+}
+.restauCardsDescriptionInner h2
+{
+    font-size: 18px;
+    margin: 0;
+    font-weight: bold;
+}
+.restauCardsDescriptionInner p
+{
+    margin-top: 5px;
 }
 footer
 {
