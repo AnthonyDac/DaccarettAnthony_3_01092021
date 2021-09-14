@@ -136,7 +136,7 @@ header
 .fonct-btn a
 {
     position: absolute;
-    top: 35%;
+    top: 32%;
     left: 0%;
     color: white;
     background-color: $primary-color;
@@ -161,4 +161,38 @@ header
 {
     color: $paragraph-color;
     margin-right: 20px;
+}
+footer
+{
+    width: 100%;
+    background-color: $paragraph-color;
+    margin-top: 0;
+    display: flex;
+    justify-content: center;
+}
+.containerFooter
+{
+    width: 85%;
+    padding: 15px 0 30px 0;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.containerFooter h1
+{
+    font-family: 'Shrikhand';
+    color: white;
+    font-weight: 200;
+    font-size: 20px;
+}
+.containerFooter a
+{
+    color: white;
+    font-family: 'Roboto';
+    font-weight: 600;
+    margin-top: 5px;
+}
+.containerFooter a i
+{
+    margin-right: 8px;
 }
