@@ -20,9 +20,21 @@ header {
 }
 
 .topNav {
+  width: 100%;
+  position: relative;
   display: flex;
   justify-content: center;
+  align-items: center;
   padding: 25px 0 10px 0;
+}
+
+.backArrow {
+  position: absolute;
+  left: 5%;
+}
+
+.backArrow i {
+  font-size: 21px;
 }
 
 .location {
@@ -46,6 +58,123 @@ header {
   width: 100%;
   background-color: #F6F6F6;
   padding: 50px 0;
+}
+
+.illustration img {
+  width: 100%;
+}
+
+.mainContainerMenu {
+  border-radius: 35px 35px 0 0;
+  margin: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: #F6F6F6;
+}
+
+.mainContainerMenuInner {
+  width: 90%;
+}
+
+.titleContainerMenu {
+  padding-top: 10px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.titleContainerMenu h1 {
+  flex-grow: 1;
+  font-weight: 0;
+  font-family: "Shrikhand";
+  font-size: 26px;
+}
+
+.titleContainerMenu i {
+  font-size: 25px;
+}
+
+.titleContainerMenu i:hover {
+  cursor: pointer;
+  font-weight: 800;
+  background: linear-gradient(180deg, #9356DC 0%, #FF79DA 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.partTwoContainerMenu {
+  margin-top: 35px;
+}
+
+.partThreeContainerMenu {
+  margin: 35px 0 40px 0;
+}
+
+.firstPartContainerMenu h2 {
+  text-transform: uppercase;
+  font-family: "Roboto";
+  font-weight: bold;
+  color: #353535;
+  font-size: 15px;
+  margin: 0;
+}
+
+.firstPartContainerMenu .greenLine {
+  margin-top: 5px;
+  width: 40px;
+  height: 3px;
+  background-color: #99E2D0;
+}
+
+.menuLister {
+  background: #FFFFFF;
+  margin-top: 15px;
+  border-radius: 15px;
+  box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-family: "Roboto";
+}
+
+.menuLister h3 {
+  margin: 0;
+  font-weight: bold;
+  -webkit-text-stroke: 1px black;
+}
+
+.menuLister p {
+  margin: 0;
+}
+
+.menuLister a {
+  margin: 0;
+  font-weight: bold;
+}
+
+.menuListerInner {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.containerButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 0 80px 0;
+}
+
+.containerButton button {
+  color: white;
+  background: linear-gradient(180deg, #FF79DA 0%, #9356DC 100%);
+  border-radius: 30px;
+  padding: 12px 45px;
+  border: none;
+  box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.2);
 }
 
 .container {
@@ -195,14 +324,14 @@ header {
 .restauCards img {
   width: 100%;
   object-fit: cover;
-  height: 200px;
+  height: 210px;
   margin: 0;
   padding: 0;
 }
 
 .restauCardsDescription {
   width: 100%;
-  margin-top: 0;
+  margin: 0;
   background-color: white;
   padding: 10px 0 0 0;
   font-family: "Roboto";
@@ -212,17 +341,15 @@ header {
 
 .restauCardsDescription i {
   font-size: 35px;
-  font-weight: 100;
-  color: black;
-  background-clip: text;
-  -webkit-background-clip: text;
+  font-weight: 0;
 }
 
 .restauCardsDescription i:hover {
-  background-clip: text;
+  cursor: pointer;
+  font-weight: 800;
+  background: linear-gradient(180deg, #9356DC 0%, #FF79DA 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  background: linear-gradient(180deg, #FF79DA 0%, #9356DC 100%);
 }
 
 .restauSizer {
@@ -261,7 +388,7 @@ footer {
 }
 
 .containerFooter {
-  width: 85%;
+  width: 90%;
   padding: 15px 0 30px 0;
   display: flex;
   justify-content: center;
