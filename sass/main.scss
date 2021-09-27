@@ -38,7 +38,7 @@ body
     display: flex;
     justify-content: center;
     align-items: center;
-    animation: dispear 3s forwards ease-in-out;
+    animation: dispear 3s forwards ease-in-out, remover 0.1s 3s forwards ease-in-out;
     opacity: 1;
     .plate {
         background: $paragraph-color;
@@ -77,8 +77,12 @@ body
     }
 }
 @keyframes dispear {
-    from {opacity: 1;}
-  to {opacity: 0;}
+    from {
+        opacity: 1;
+    }
+  to {
+      opacity: 0;
+    }
 }
 @keyframes rotation {
     from {
@@ -96,6 +100,14 @@ body
     to {
         opacity: 1;
         transform: translateY(0px);
+    }
+}
+@keyframes remover {
+    from {
+        
+    }
+    to {
+        height: 0px;
     }
 }
 header 
@@ -406,7 +418,14 @@ header
             margin-right: 20px;
         }
     }
+
 }
+
+.restauCards:hover
+{
+    transform: scale(1.02);
+}
+
 .restaurants
 {
     width: 100%;
