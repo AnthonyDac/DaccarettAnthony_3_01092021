@@ -12,21 +12,21 @@
     <title>OhMyFood - Accueil</title>
 </head>
 <body>
+    <div class="loading-screen">
+        <div class="plate">
+            <div class="plate-inner">
+                <div class="plate-inner-center">
+                    <i class="fas fa-utensils"></i>
+                </div>
+            </div>
+        </div>
+    </div>
     <header>
         <div class="topNav">
             <img src="public/img/logo/ohmyfood@2x.svg">
         </div>
     </header>
     <main>
-        <div class="loading-screen">
-            <div class="plate">
-                <div class="plate-inner">
-                    <div class="plate-inner-center">
-                        <i class="fas fa-utensils"></i>
-                    </div>
-                </div>
-            </div>
-        </div>
         <div class="location">
             <i class="fas fa-map-marker-alt"></i>
             <p>Paris, Belleville</p>
@@ -60,53 +60,73 @@
         <section class="restaurants">
             <div class="containerRestaurants">
                 <h1>Restaurants</h1>
-                <div onclick="location.href='menulapalettedugout.html'" class="restauCards">
-                    <a>Nouveau</a>
-                    <img src="public/img/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg">
+                <div class="restauCards">
+                    <a class="new">Nouveau</a>
+                    <a href="menulapalettedugout.html">
+                        <img src="public/img/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg">
+                    </a>
                     <div class="restauCardsDescription">
                         <div class="restauSizer">
                             <div class="restauCardsDescriptionInner">
                                 <h2>La palette du goût</h2>
                                 <p>Ménilmontant</p>
                             </div>
-                            <i class="far fa-heart"></i>
+                            <div class="coeurs">
+                                <i class="far fa-heart"></i>
+                                <i class="fas fa-heart"></i>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div onclick="location.href='menulanoteenchantee.html'" class="restauCards">
-                    <a>Nouveau</a>
-                    <img src="public/img/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg">
+                <div class="restauCards">
+                    <a class="new">Nouveau</a>
+                    <a href="menulanoteenchantee.html">
+                        <img src="public/img/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg">
+                    </a>
                     <div class="restauCardsDescription">
                         <div class="restauSizer">
                             <div class="restauCardsDescriptionInner">
                                 <h2>La note enchantée</h2>
                                 <p>Charonne</p>
                             </div>
-                            <i class="far fa-heart"></i>
+                            <div class="coeurs">
+                                <i class="far fa-heart"></i>
+                                <i class="fas fa-heart"></i>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div onclick="location.href='menualafrancaise.html'" class="restauCards">
-                    <img src="public/img/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg">
+                <div class="restauCards">
+                    <a href="menualafrancaise.html">
+                        <img src="public/img/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg">
+                    </a>
                     <div class="restauCardsDescription">
                         <div class="restauSizer">
                             <div class="restauCardsDescriptionInner">
                                 <h2>A la française</h2>
                                 <p>Cité Rouge</p>
                             </div>
-                            <i class="far fa-heart"></i>
+                            <div class="coeurs">
+                                <i class="far fa-heart"></i>
+                                <i class="fas fa-heart"></i>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div onclick="location.href='menuledelicedessens.html'" class="restauCards">
-                    <img src="public/img/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg">
+                <div class="restauCards">
+                    <a href="menuledelicedessens.html">
+                        <img src="public/img/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg">
+                    </a>
                     <div class="restauCardsDescription">
                         <div class="restauSizer">
                             <div class="restauCardsDescriptionInner">
                                 <h2>Le délice des sens</h2>
                                 <p>Folie-Méricourt</p>
                             </div>
-                            <i class="far fa-heart"></i>
+                            <div class="coeurs">
+                                <i class="far fa-heart"></i>
+                                <i class="fas fa-heart"></i>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -119,7 +139,7 @@
             <a><i class="fas fa-utensils"></i> Proposer un restaurant</a>
             <a><i class="fas fa-hands-helping"></i> Devenir partenaire</a>
             <a>Mentions légales</a>
-            <a href="contact@ohmyfood.com">Contact</a>
+            <a href="mailto:contact@ohmyfood.com">Contact</a>
         </div>
     </footer>
 </body>

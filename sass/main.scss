@@ -6,10 +6,11 @@ $paragraph-color: #353535;
 $surligner-and-background-animations: #99E2D0;
 $alternative-background: #F6F6F6;
 $background-listers: #FFFFFF;
-$background-button: linear-gradient(180deg, $secondary-color 0%, $primary-color 100%);
-$reverse-background-button: linear-gradient(180deg, $primary-color 0%, $secondary-color 100%);
+$background-button: linear-gradient(180deg, $secondary-color, $primary-color);
+$reverse-background-button: linear-gradient(180deg, $primary-color, $secondary-color);
 $softshadowing: 0 0 8px 0 rgba(0,0,0,0.2);
 $middleshadowing: 1px 10px 18px 0px rgba(0,0,0,0.25);
+$hardshadowing: 1px 10px 10px 0px rgba(0,0,0,0.5);
 
 .coloredPrimary
 {
@@ -25,6 +26,16 @@ body
     padding: 0;
     margin: auto;
     background: $background-color;
+}
+main
+{
+    opacity: 0;
+    animation: appear 1s 1s forwards ease-in-out;
+}
+header
+{
+    opacity: 0;
+    animation: appear 1s 1s forwards ease-in-out;
 }
 .loading-screen
 {
@@ -74,6 +85,14 @@ body
                 }
             }
         }
+    }
+}
+@keyframes appear {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
     }
 }
 @keyframes dispear {
@@ -176,6 +195,55 @@ header
         object-fit: cover;
     }
 }
+.coeurs{
+    position: relative;
+    i {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &:first-child
+        {
+            font-size: 28px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 0.5;
+            height: 28px;
+            width: 28px;
+            transform-origin: center bottom;
+        }
+        &:nth-child(2)
+        {
+            position: absolute;
+            top: 0;
+            opacity: 0;
+            -webkit-background-clip: text;
+            color: transparent;
+            background-image : linear-gradient(180deg,$primary-color,$secondary-color);
+            font-size: 28px;
+        }
+        &:active
+                {
+                    cursor: pointer;
+                    font-weight: 800;
+                    background: $reverse-background-button;
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                    animation: 0.2s ease-in coeur;
+                    animation-fill-mode: forwards;
+                }
+    }
+}
+@keyframes coeur{
+    0%{
+        opacity: 0;
+        transform:scale(0)
+    }
+    100%{
+        opacity: 1;
+        transform:scale(1)
+    }
+}
 .mainContainerMenu
 {
     border-radius: 35px 35px 0 0;
@@ -202,18 +270,6 @@ header
                 font-weight: 0;
                 font-family: 'Shrikhand';
                 font-size: 26px;
-            }
-            i
-            {
-                font-size: 25px;
-                :hover
-                {
-                    cursor: pointer;
-                    font-weight: 800;
-                    background: $reverse-background-button;
-                    -webkit-background-clip: text;
-                    -webkit-text-fill-color: transparent;
-                }
             }
         }
         .firstPartContainerMenu{
@@ -308,6 +364,10 @@ header
         padding: 12px 45px;
         border: none;
         box-shadow: $softshadowing;
+        &:hover {
+            box-shadow: $hardshadowing;
+            opacity: 0.9;
+        }
     }
 }
 .container
@@ -346,6 +406,10 @@ header
         padding: 17px 5px;
         letter-spacing: 1px;
         margin-top: 10px;
+        &:hover {
+            box-shadow: $hardshadowing;
+            opacity: 0.9;
+        }
     }
 }
 
@@ -448,7 +512,7 @@ header
             overflow: hidden;
             margin-top: 25px;
             box-shadow: $middleshadowing;
-            a
+            .new
             {
                 position: absolute;
                 background-color: #99E2D0;
@@ -502,19 +566,6 @@ header
                             margin-top: 5px;
                         }
                     }
-                    i
-                    {
-                        font-size: 35px;
-                        font-weight: 0;
-                        :hover
-                        {
-                            cursor: pointer;
-                            font-weight: 800;
-                            background: $reverse-background-button;
-                            -webkit-background-clip: text;
-                            -webkit-text-fill-color: transparent;
-                        }
-                    }
                 }
             }
         }
@@ -553,5 +604,9 @@ footer
         {
             margin-right: 8px;
         }
+    }
+    :nth-child(5)
+    {
+        text-decoration: none;
     }
 }
