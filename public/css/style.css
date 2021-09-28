@@ -182,6 +182,9 @@ header {
   justify-content: center;
   align-items: center;
 }
+.coeurs i:hover {
+  cursor: pointer;
+}
 .coeurs i:first-child {
   font-size: 28px;
   display: flex;
@@ -298,14 +301,17 @@ header {
   padding-left: 10px;
   width: 100%;
 }
+.menuLister:hover {
+  cursor: pointer;
+}
 .menuLister:active .check {
-  animation: slider-check-in 1s forwards ease-in-out;
+  animation: slider-check-in 1s forwards ease-out;
 }
 .menuLister:active .check i {
   animation: rotation-check 1s forwards ease-in-out;
 }
 .menuLister:active a {
-  animation: slider-check-in 1s forwards ease-in-out;
+  animation: slider-check-in 1s forwards ease-out;
 }
 .menuLister h3 {
   margin: 0;
@@ -388,8 +394,9 @@ header {
   box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.2);
 }
 .containerButton button:hover {
-  box-shadow: 1px 10px 10px 0px rgba(0, 0, 0, 0.5);
+  box-shadow: 1px 3px 20px 0px rgba(0, 0, 0, 0.5);
   opacity: 0.9;
+  cursor: pointer;
 }
 
 .container {
@@ -427,7 +434,7 @@ header {
   margin-top: 10px;
 }
 .container button:hover {
-  box-shadow: 1px 10px 10px 0px rgba(0, 0, 0, 0.5);
+  box-shadow: 1px 3px 20px 0px rgba(0, 0, 0, 0.5);
   opacity: 0.9;
 }
 
