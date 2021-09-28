@@ -3,6 +3,7 @@ $secondary-color: #FF79DA;
 $third-color: #99E2D0;
 $background-color: #EAEAEA;
 $paragraph-color: #353535;
+$hover-background: #F5EDFF;
 $surligner-and-background-animations: #99E2D0;
 $alternative-background: #F6F6F6;
 $background-listers: #FFFFFF;
@@ -38,6 +39,9 @@ header
 {
     opacity: 0;
     animation: appear 1s 1s forwards ease-in-out;
+    width: 100%;
+    background: white;
+    box-shadow: $softshadowing;
 }
 .loading-screen
 {
@@ -130,12 +134,6 @@ header
     to {
         height: 0px;
     }
-}
-header 
-{
-    width: 100%;
-    background: white;
-    box-shadow: $softshadowing;
 }
 .topNav
 {
@@ -494,6 +492,51 @@ header
 }
 .container-fonct
 {
+    .fonct-btn
+    {
+        position: relative;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 0px;
+        a
+        {
+            position: absolute;
+            top: 32%;
+            left: -20px;
+            color: white;
+            background-color: $primary-color;
+            border-radius: 50%;
+            padding: 5px 10px;
+            font-family: 'Roboto';
+            font-weight: bold
+        }
+        button
+        {
+            width: 100%;
+            border: none;
+            font-family: 'Roboto';
+            font-weight: bolder;
+            font-size: 20px;
+            border-radius: 25px;
+            height: 75px;
+            color: black;
+            box-shadow: $middleshadowing;
+            i
+            {
+                color: $paragraph-color;
+                margin-right: 20px;
+            }
+            &:hover {
+                background: $hover-background;
+                i {
+                    color: $primary-color;
+                }
+            }
+        }
+
+    }
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -516,51 +559,6 @@ header
         padding: 15px 0;
     }
 }
-.fonct-btn
-{
-    position: relative;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 0px;
-    a
-    {
-        position: absolute;
-        top: 32%;
-        left: 0%;
-        color: white;
-        background-color: $primary-color;
-        border-radius: 50%;
-        padding: 5px 10px;
-        font-family: 'Roboto';
-        font-weight: bold
-    }
-    button
-    {
-        width: 93%;
-        border: none;
-        font-family: 'Roboto';
-        font-weight: bolder;
-        font-size: 20px;
-        border-radius: 25px;
-        height: 75px;
-        color: black;
-        box-shadow: $middleshadowing;
-        i
-        {
-            color: $paragraph-color;
-            margin-right: 20px;
-        }
-    }
-
-}
-
-.restauCards:hover
-{
-    transform: scale(1.02);
-}
-
 .restaurants
 {
     width: 100%;
@@ -583,6 +581,10 @@ header
             overflow: hidden;
             margin-top: 25px;
             box-shadow: $middleshadowing;
+            &:hover
+            {
+                transform: scale(1.02);
+            }
             .new
             {
                 position: absolute;
@@ -679,5 +681,34 @@ footer
     :nth-child(5)
     {
         text-decoration: none;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .restaurants {
+        width: 100%;
+        .containerRestaurants
+        {
+            .containerRestaurants-inner {
+                display: flex;
+                flex-flow: wrap row;
+                justify-content: space-between;
+                .restauCards {
+                    width: 49%;
+                }
+                h1 {
+                    flex-grow: 1;
+                }
+            }
+        }
+    }
+    main {
+
+        .mainContainerMenu {
+            
+            .mainContainerMenuInner {
+                width: 70%;
+            }
+        }
     }
 }

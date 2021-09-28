@@ -21,6 +21,9 @@ main {
 header {
   opacity: 0;
   animation: appear 1s 1s forwards ease-in-out;
+  width: 100%;
+  background: white;
+  box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.2);
 }
 
 .loading-screen {
@@ -111,12 +114,6 @@ header {
     height: 0px;
   }
 }
-header {
-  width: 100%;
-  background: white;
-  box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.2);
-}
-
 .topNav {
   width: 100%;
   position: relative;
@@ -454,6 +451,46 @@ header {
   margin-top: 0;
   padding: 0 0 70px 0;
 }
+.container-fonct .fonct-btn {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0px;
+}
+.container-fonct .fonct-btn a {
+  position: absolute;
+  top: 32%;
+  left: -20px;
+  color: white;
+  background-color: #9356DC;
+  border-radius: 50%;
+  padding: 5px 10px;
+  font-family: "Roboto";
+  font-weight: bold;
+}
+.container-fonct .fonct-btn button {
+  width: 100%;
+  border: none;
+  font-family: "Roboto";
+  font-weight: bolder;
+  font-size: 20px;
+  border-radius: 25px;
+  height: 75px;
+  color: black;
+  box-shadow: 1px 10px 18px 0px rgba(0, 0, 0, 0.25);
+}
+.container-fonct .fonct-btn button i {
+  color: #353535;
+  margin-right: 20px;
+}
+.container-fonct .fonct-btn button:hover {
+  background: #F5EDFF;
+}
+.container-fonct .fonct-btn button:hover i {
+  color: #9356DC;
+}
 .container-fonct :nth-child(3) {
   margin-top: 40px;
 }
@@ -465,45 +502,6 @@ header {
   font-weight: 900;
   font-family: "Roboto";
   padding: 15px 0;
-}
-
-.fonct-btn {
-  position: relative;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 0px;
-}
-.fonct-btn a {
-  position: absolute;
-  top: 32%;
-  left: 0%;
-  color: white;
-  background-color: #9356DC;
-  border-radius: 50%;
-  padding: 5px 10px;
-  font-family: "Roboto";
-  font-weight: bold;
-}
-.fonct-btn button {
-  width: 93%;
-  border: none;
-  font-family: "Roboto";
-  font-weight: bolder;
-  font-size: 20px;
-  border-radius: 25px;
-  height: 75px;
-  color: black;
-  box-shadow: 1px 10px 18px 0px rgba(0, 0, 0, 0.25);
-}
-.fonct-btn button i {
-  color: #353535;
-  margin-right: 20px;
-}
-
-.restauCards:hover {
-  transform: scale(1.02);
 }
 
 .restaurants {
@@ -526,6 +524,9 @@ header {
   overflow: hidden;
   margin-top: 25px;
   box-shadow: 1px 10px 18px 0px rgba(0, 0, 0, 0.25);
+}
+.restaurants .containerRestaurants .restauCards:hover {
+  transform: scale(1.02);
 }
 .restaurants .containerRestaurants .restauCards .new {
   position: absolute;
@@ -609,6 +610,27 @@ footer a i {
 }
 footer :nth-child(5) {
   text-decoration: none;
+}
+
+@media screen and (min-width: 1024px) {
+  .restaurants {
+    width: 100%;
+  }
+  .restaurants .containerRestaurants .containerRestaurants-inner {
+    display: flex;
+    flex-flow: wrap row;
+    justify-content: space-between;
+  }
+  .restaurants .containerRestaurants .containerRestaurants-inner .restauCards {
+    width: 49%;
+  }
+  .restaurants .containerRestaurants .containerRestaurants-inner h1 {
+    flex-grow: 1;
+  }
+
+  main .mainContainerMenu .mainContainerMenuInner {
+    width: 70%;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
