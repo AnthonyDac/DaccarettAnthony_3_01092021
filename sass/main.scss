@@ -262,8 +262,9 @@ header
             width: 100%;
             display: flex;
             flex-direction: row;
+            justify-content: space-between;
             align-items: center;
-            h2
+            h1
             {
                 flex-grow: 1;
                 font-weight: 0;
@@ -500,6 +501,7 @@ header
             height: 75px;
             color: black;
             box-shadow: $middleshadowing;
+            transition-duration: 0.3s;
             i
             {
                 color: $paragraph-color;
@@ -509,6 +511,7 @@ header
                 background: $hover-background;
                 i {
                     color: $primary-color;
+                    transition-duration: 0.3s;
                 }
             }
         }
@@ -558,9 +561,11 @@ header
             overflow: hidden;
             margin-top: 25px;
             box-shadow: $middleshadowing;
+            transition-duration: 0.5s;
             &:hover
             {
                 transform: scale(1.02);
+                transition-duration: 0.5s;
             }
             .new
             {
